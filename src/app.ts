@@ -20,6 +20,12 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 3000;
+//imports routes
+import send_otp_to_phone from "./routes";
+import verify_otp from "./routes";
+// Routes
+app.use("/api/v1/", send_otp_to_phone);
+app.use("/api/v1", verify_otp);
 
 app.get("/", (req, res) => {
   console.log("Hello World");

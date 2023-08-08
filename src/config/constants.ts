@@ -1,0 +1,1 @@
+export const OTP_DURATION_IN_MINUTES = process.env.OTP_DURATION_IN_MINUTES || 5;
